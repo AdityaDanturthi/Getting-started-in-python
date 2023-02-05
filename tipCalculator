@@ -1,0 +1,29 @@
+# Tip calculator
+def five(bill):
+    return round(bill*(5/100), 2)
+
+def ten(bill):
+    return round(bill*(10/100), 2)
+
+def fifteen(bill):
+    return round(bill*(15/100), 2)
+    
+def twenty(bill):
+    return round(bill*(20/100), 2)
+
+bill, funcname = input("Please input the amount and tipperc (five , ten, fifteen or twenty):").split()
+
+bill = float(bill)
+
+if funcname == "five":
+    fiveperc = five(bill)
+    print(f"5% tip on ${bill} is","$"+str(fiveperc))
+elif funcname == "ten":
+    tenperc = ten(bill)
+    print(f"10% tip on ${bill} is","$"+str(tenperc))
+elif funcname == "fifteen":
+    fifteenperc = fifteen(bill)
+    print(f"15% tip on ${bill} is","$"+str(fifteenperc))
+elif funcname == "twenty":
+    twentyperc = twenty(bill)
+    print(f"20% tip on ${bill} is","$"+str(twentyperc))
